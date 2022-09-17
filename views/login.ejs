@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css'/>
+    <script type='text/javascript' src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+    <script src="scripts.js"></script>
+    <title>Login Page</title>
+
+
+</head>
+<body>
+    <section class="header">
+        <div class="logo">Bookings</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Booking</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <form action="">
+                <input type = "text" id = "search-box" name="search-box" placeholder="Enter your destination" >
+                <button type = "button" id ="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <form action="/login" method = "post" class="loginForm">
+     <div class="container">
+        <h1 class="loginHeader">Login Form</h1>
+        <label>UserID:</label>
+        <input class = "loginInput"type="text" placeholder="Enter UserID here" name = "uname" required>
+        <label>Password:</label>
+        <input class="loginInput" type="password" placeholder="Enter Password here" name = "pw" required>
+        <button type = "submit" class="loginButton">Login</button>
+    </div>    
+    </form>
+
+</body>
+</html>

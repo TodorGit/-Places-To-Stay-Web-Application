@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css'/>
+    <script type='text/javascript' src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+    <script src="scripts.js"></script>
+    <title>Booking System</title>
+</head>
+<body>
+
+    <section class="header">
+        <div class="logo">Bookings</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="login">Log In</a></li>
+                <li><a href="booking">Booking</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <form action="">
+                <input type = "text" id = "search-box" name="search-box" placeholder="Enter your destination" >
+                <button type = "button" id ="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="mapOne" id="online-map"> <!-- Section for inserting the map -->
+
+        </div>
+
+        <div class="list" id="list">
+            
+
+        </div>
+    </section>
+
+    <script>
+        addButtonAction();
+        const map = L.map("online-map");//actual map
+        const spots=[];
+        setMap(51.53988, 0.053980, spots)
+
+
+
+    </script>
+</body>
+</html>

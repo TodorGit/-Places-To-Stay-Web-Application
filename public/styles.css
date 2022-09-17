@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Work+Sans&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #F7ECDE;
+}
+
+.header {
+ display: flex;
+ background-color: #250066;
+ width: 100%;
+ height: 6vh;
+}
+
+.logo{
+    font-size:30px;
+    color: #ECC05B;
+    font-family: 'Black Ops One', cursive;
+    margin: 10px 10px;
+ 
+}
+
+nav{
+    align-items: flex-start;
+    text-align: left;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin: 5px 20px;
+}
+
+nav ul li a{
+    color:#fff ;
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    /* margin: auto 20px;    */
+}
+
+nav ul li::after{
+    content:'';
+    width: 0% ;
+    height: 2px;
+    margin-top: 1.5px;
+    background-color: #ECC05B;
+    display: block;
+    transition: 0.5s;
+
+}
+
+nav ul li:hover::after{
+
+    width: 100%;
+    height: 2px;
+   
+}
+
+.search{
+    max-width: 500px;
+    margin: auto  0px auto 900px ;
+}
+
+.search form{
+
+   display: flex;
+
+}
+
+.search input[type="text"]{
+    display: block;
+    width: 150px;
+    margin-top: 8px;
+    height: 3vh;
+    font-size: 12px;
+    color: #2C3639;
+    padding: 3px 3px 3px 20px;
+    border: 2px solid #2C3639 ;
+    border-radius: 30px;
+   
+}
+
+.search button{
+    align-items: flex-end;
+    width: 20%;
+    padding: 15px;
+    margin-top: 8px;
+    height: 4vh;
+    background-color: #ECC05B;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer ;
+}
+
+
+.search button i{
+    display: block;
+    margin-left: -5px;
+    margin-top: -4px;
+
+}
+
+
+
+.mapOne{ 
+    width: 40%;
+    height: 50vh;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin: 30px 30px 30px auto;
+
+}
+
+
+
+.list{
+    width: 100%;
+    padding: 10px;
+    background: #250066;
+    margin: 1px 0px;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+}   
+
+table{
+    border-collapse: collapse;
+    border-spacing: 10px;
+    margin: 10px auto;
+    
+}
+
+th, td{
+    padding: 10px 20px;
+    border: 2px solid #ECC05B;
+}
+
+.bookButton{
+    margin-left: 25px;
+    background-color: #ECC05B;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    color: #250066;
+    padding: 5px 15px;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer ;
+    transition: .5s;
+}
+
+.bookButton:hover{
+    background-color: #fff;
+
+}
+
+
+/* Login Styles */
+
+
+/*Form Styles*/
+.wrapper {
+	width: 45%;
+    height: 50vh;
+	margin: 50px auto;
+	background: #250066;
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+	border-radius: 3px;
+	box-shadow: 0 0 10px rgba(0,0,0, .4); 
+	text-align: center;
+	padding-top: 1px;
+}
+form {
+  width: 35%;
+  margin: 0 auto;
+}
+
+form.register{																				/* Register form height */
+	height: 420px;
+}
+
+form .text-field {																			/* Input fields; Username, Password etc. */
+	border: 1px solid #a6a6a6;
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+	margin-top: 10px;
+	padding-left: 10px;
+	color: #6c6c6c;
+	background: #fcfcfc;
+	outline: none;
+  
+}
+
+form .text-field:focus {
+	box-shadow: inset 0 0 2px rgba(0,0,0, .3);
+	color: #a6a6a6;
+	background: white;
+}
+
+form .button {																				/* Submit button */
+	border-radius: 20px;
+	
+	width: 242px;
+	height: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background: linear-gradient(bottom, #ECC05B 0%, #ECC05B 100%);
+	background: -o-linear-gradient(bottom, #ECC05B 0%, #ECC05B 100%);
+	background: -moz-linear-gradient(bottom, #ECC05B 0%, #ECC05B 100%);
+	background: -webkit-linear-gradient(bottom, #ECC05B 0%, #ECC05B 100%);
+	background: -ms-linear-gradient(bottom, #ECC05B 0%, #ECC05B 100%);
+	transition: .5s;
+	cursor: pointer;
+	color: #250066;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 #ECC05B;
+	
+	font-size: 13px;
+}
+
+form .button:hover {
+    border: 1px solid #ECC05B;
+    box-shadow: inset 0 1px 0 #ECC05B;
+    
+
+
+}
+
+form .button:active {
+	background: linear-gradient(bottom, #ECC05B 0%, #ECC05B 100%);
+	box-shadow: inset 0 0 2px rgba(0,0,0, .3), 0 1px 0 white;
+}
+
+
+@media only screen and (max-device-width:568px) {
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+  input[type="date"]:focus,
+    textarea:focus,
+    select:focus {
+        font-size:16px;
+    }
+}
+
+
+/*Login Page*/
+
+
+.loginHeader{
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+
+.loginForm {
+    border: 3px solid #250066;
+    border-radius: 20px;
+    width: 25%;
+    height: auto;
+    margin: 10vh auto;
+    padding: 20px;
+}
+
+.loginInput{
+    width: 100%;
+    margin: 10px 0px;
+    padding: 12px 5px;
+    border: 2px solid #250066;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+label{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+
+.loginButton{
+    background-color: #250066;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    width: 50%;
+    margin: 20px 0 20px 120px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    transition: 0.5s;
+
+    
+}
+
+.loginButton:hover{
+    background-color: #ECC05B;
+    color: #250066;
+    font-weight: bold;
+}
+
+
+
+
+/* Card  */
+
+/* @import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin: -150px;
+  float: left;
+  perspective: 500px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  line-height: 300px;
+  color: #03446A;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #03446A;
+  color: white;
+  transform: rotateY( 180deg );
+} */

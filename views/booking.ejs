@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles.css">
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css'/>
+    <script type='text/javascript' src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+    <script src="scripts.js"></script>
+    <title>Booking Form</title>
+</head>
+<body>
+    <section class="header">
+        <div class="logo">Booking</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Booking</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- <div class="card">
+        <div class="content">
+          <div class="front">
+            Front
+          </div>
+          <div class="back">
+            Back!
+          </div>
+        </div>
+      </div>
+
+    <div class="wrapper"> -->
+      <div class="wrapper">
+
+        <form>
+        
+            <h2>Booking Form</h2>
+
+            <label class="desc" id="title2" for="adults">Name<label>
+            <input type="text" id="guestName" class="text-field" name="name" placeholder="Enter your name">
+          
+            <label class="desc" id="title3" for="adults">Adults<label>
+            <input type="number" id="npeople" class="text-field" name="adults" min="1" max="20" step="1" value="1">
+              
+              <label class="desc" id="title1" for="arrival">Arrival</label>
+              <input type="date" id="theDate" class="text-field" value="12/19/2012"  />
+
+              <div class="warning" id="warningMsg"></div>
+        
+          
+            <input type="button" value="Book"  id="bookingButton" class="button"/>
+      
+            </form>
+      </div>
+
+
+      <script>
+
+        document.getElementById('bookingButton').addEventListener('click', () => {
+          alert('Im clicked');
+
+          var np = Number(document.getElementById('npeople').value);
+          var rawDate = document.getElementById('theDate').value;
+          var newDate = rawDate.substring(2, 4) + rawDate.substring(5, 7) + rawDate.substring(8, 10);
+
+          var final_date = Number(newDate);
+          const finalData = new Object();
+          finalData.accID = 1; 
+          finalData.username = 'admin';
+          finalData.npeople = np;
+          finalData.thedate = final_date ;
+          book(finalData);
+
+        });
+
+
+        async function book(data){
+
+        alert('I am in a booking function')
+        fetch('/booking', {
+        method: 'POST', 
+        headers: {'Content-Type': 'application/json',}, 
+        body: JSON.stringify(data)
+        })
+        .then((response) => response.json())
+        .then((response) => {alert("successfull");
+        if(response.info === 1){
+          document.getElementById('warningMsg').innerHTML = 'Booking Successful';
+        }  else {
+          document.getElementById('warningMsg').innerHTML = 'Error'
+        }
+      })
+        .catch((error) => {alert('Error Found in adding the data!')})
+
+
+}
+
+
+
+      </script>
+</body>
+</html>
